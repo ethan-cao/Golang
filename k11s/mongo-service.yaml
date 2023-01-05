@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # the name of this service, endpoint to access this service network
+  name: mongo-service
+spec:
+  # forward request to pod that has the label
+  selector:
+    app: mongo
+  ports:
+    # port to access this service
+    - protocol: TCP
+      # port to receive request
+      port: 27017
+      # port to forward request to
+      # should be the same as the containerPort of pod in the deployment
+      targetPort: 27017
