@@ -17,4 +17,5 @@ spec:
       # port to forward request to
       # should be the same as the containerPort of pod in the deployment
       targetPort: 3000
+      # port for external IP address to access this pod
       nodePort: 30100
