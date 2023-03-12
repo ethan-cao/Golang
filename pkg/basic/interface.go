@@ -1,4 +1,4 @@
-package main
+package basic
 
 // Interfaces are named collections of method signatures.
 

@@ -1,4 +1,4 @@
-package main
+package basic
 
 import "fmt"
 
@@ -8,7 +8,6 @@ func varTest() {
 
 	// declare multiple, type inferred
 	var b, c = 1, 2
-	fmt.Println(b, c)
 
 	// short variable declaration(declare, infer tpye, assign), mutable
 	// same as var foo int = 32
@@ -33,6 +32,8 @@ func varTest() {
 	string1 := "this is a string"
 	// '' for character
 	char1 := 'c'
+
+	fmt.Println(name, b, c, foo, string1, char1)
 }
 
 func pointerTest() {

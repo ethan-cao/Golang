@@ -1,4 +1,4 @@
-package main
+package basic
 
 import "fmt"
 
@@ -15,9 +15,12 @@ func slice1() {
 	s1 = append(s1, "c")
 
 	fmt.Printf("size %v \n", len(s1)) // 3
+	fmt.Printf("size %v \n", len(s2)) // 0
+	fmt.Printf("size %v \n", len(s3)) // 0
 
 	// empty slice of length 3
 	s4 := make([]string, 3)
+	fmt.Printf("size %v \n", len(s4)) // 3
 
 	for idx, value := range s1 {
 		fmt.Printf("value from index %v is %v \n", idx, value)

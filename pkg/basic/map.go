@@ -1,8 +1,8 @@
-package main
+package basic
 
 import "fmt"
 
-func MapTest() {
+func mapTest() {
 	// create a map string->int
 	m0 := make(map[string]int)
 	fmt.Println(len(m0))

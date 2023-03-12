@@ -1,24 +1,44 @@
-package main
+package basic
 
-import "fmt"
+import (
+	"fmt"
+	"golang/pkg/utils"
+)
+
+// package level variables, accessible in this file's package
+var packageVar1 int = 1
+var packageVar2 string
+
+const packaveVar3 int = 1
+const packageVar4 = "s"
 
 // outside a func, a statement should always start with a keyword
 // fmt.Print("Hello, world") illegal
 
 // param a and b are both int
-// it returns 1 int value and 1 stirng value
-func f1(a, b int) (int, string) {
-	fmt.Print("Hello, world")
+// returns 1 int value and 1 stirng value
+func F1(a, b int) (int, string) {
+	fmt.Printf("calling basic.F3() \n")
 
 	return a + b, "test"
 }
 
 // with single return
-func f2() int { return 1 }
+func F2() int {
+	fmt.Printf("calling basic.F2() \n")
+
+	utils.Test1()
+
+	return 1
+}
 
 // not necessry to reutrn a value,
 // function without reutrn value
-func f3() { fmt.Print("Hello, world") }
+func F3() {
+	fmt.Printf("calling basic.F3() \n")
+	mapTest()
+
+}
 
 // Named return values
 func f5(sum int) (x, y int) {
@@ -38,6 +58,5 @@ func DeferTest() {
 	defer fmt.Print("3")
 
 	fmt.Print("4")
+	// print 1432
 }
-
-// print 1432
