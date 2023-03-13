@@ -3,10 +3,11 @@ package basic
 import "fmt"
 
 func mapTest() {
-	// create a map string->int
+	// create an empty map string->int
 	m0 := make(map[string]int)
 	fmt.Println(len(m0))
 
+	// create a map string->int with initial values
 	m1 := map[string]int{
 		"k1": 1,
 		"k2": 2,
