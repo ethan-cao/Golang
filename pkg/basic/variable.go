@@ -36,7 +36,7 @@ func varTest() {
 	fmt.Println(name, b, c, foo, string1, char1)
 }
 
-func pointerTest() {
+func PointerTest1() {
 	var num int = 1
 
 	// use & to get the memory address
@@ -44,14 +44,36 @@ func pointerTest() {
 
 	// store the address of int num in pointer type address
 	var address *int = &num
+	fmt.Printf("memory address of num is %v \n", address)
 
 	// use * to get the value
 	fmt.Printf("value stored in this memory address is %v \n", *address)
 
+	// de-reference a pointer to access the value
 	// update value store in address to 2, so num is updated to 2
 	*address = 2
 
-	fmt.Print(num)
+	fmt.Println(num) // 2
+
+	name := "name1"
+	// pass-by-value: parameter is copied into function
+	update1(&name)
+	fmt.Println(name)
+
+	slice := []int{}
+	update2(&slice)
+	fmt.Printf("%v", slice)
+}
+
+func update1(name *string) {
+	// de-reference a pointer to access the value
+	*name = "name2"
+}
+
+func update2(slice *[]int) {
+	*slice = append(*slice, 1)
+	*slice = append(*slice, 2)
+	*slice = append(*slice, 3)
 }
 
 func zeroTest() {

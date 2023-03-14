@@ -4,7 +4,8 @@ import (
 	"golang/pkg/basic"
 )
 
-// The main() function must appear only once, be in the main() package, and receive and return no arguments.
+// There is ONLY one main() in the main package
+// it receives and returns no arguments
 func main() {
-	basic.RunLongTask()
+	basic.PointerTest1()
 }

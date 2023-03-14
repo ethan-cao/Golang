@@ -9,11 +9,11 @@ import (
 var waitGroup = sync.WaitGroup{}
 
 func RunLongTask() {
-	// set waitGroup counter to be 2
-	// before spin off threads, add threads to waitGroup,
+	// set waitGroup counter to be 2 before spin off goroutine
 	// so the main thread waits for these thread to complete
 	waitGroup.Add(2)
 
+	// spin off new goroutine to run tasks
 	go runLongTask1()
 	go runLongTask2()
 

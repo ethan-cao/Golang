@@ -10,13 +10,13 @@ type User struct {
 	Email string
 }
 
-// define func on struct
-// the receiver u is a pointer to the User struct that this method will be called on.
-func (u *User) Details() string {
+// receiver function
+// define func on struct, Java claass method
+func (u User) Details() string {
 	return fmt.Sprintf("ID: %d, Name: %s, Email: %s", u.ID, u.Name, u.Email)
 }
 
-func test() {
+func TestStruct() {
 	user := User{
 		ID:    1,
 		Name:  "ethan",
@@ -24,4 +24,5 @@ func test() {
 	}
 
 	fmt.Println(user.Name) // ethan
+	fmt.Println(user.Details())
 }
