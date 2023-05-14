@@ -52,13 +52,12 @@ func PointerTest1() {
 	// de-reference a pointer to access the value
 	// update value store in address to 2, so num is updated to 2
 	*address = 2
-
 	fmt.Println(num) // 2
 
 	name := "name1"
 	// pass-by-value: parameter is copied into function
 	update1(&name)
-	fmt.Println(name)
+	fmt.Println("after update1(): ", name)
 
 	slice := []int{}
 	update2(&slice)
