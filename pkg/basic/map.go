@@ -20,4 +20,5 @@ func mapTest() {
 	for k, v := range m1 {
 		fmt.Println("Key:", k, "Value:", v)
 	}
+
 }

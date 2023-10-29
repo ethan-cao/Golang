@@ -9,14 +9,14 @@ import (
 var packageVar1 int = 1
 var packageVar2 string
 
-const packaveVar3 int = 1
+const packageVar3 int = 1
 const packageVar4 = "s"
 
 // outside a func, a statement should always start with a keyword
 // fmt.Print("Hello, world") illegal
 
 // param a and b are both int
-// returns 1 int value and 1 stirng value
+// returns 1 int value and 1 string value
 func F1(a, b int) (int, string) {
 	fmt.Printf("calling basic.F3() \n")
 
@@ -32,12 +32,11 @@ func F2() int {
 	return 1
 }
 
-// not necessry to reutrn a value,
-// function without reutrn value
+// not necessary to return a value,
+// function without return value
 func F3() {
 	fmt.Printf("calling basic.F3() \n")
 	mapTest()
-
 }
 
 // Named return values

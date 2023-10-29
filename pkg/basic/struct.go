@@ -3,7 +3,7 @@ package basic
 import "fmt"
 
 // a struct is collection of different data types
-// similar to Java calss
+// similar to Java class
 type User struct {
 	ID    int
 	Name  string
@@ -11,7 +11,7 @@ type User struct {
 }
 
 // receiver function
-// define func on struct, Java claass method
+// define func on struct, Java class method
 func (u User) Details() string {
 	return fmt.Sprintf("ID: %d, Name: %s, Email: %s", u.ID, u.Name, u.Email)
 }
