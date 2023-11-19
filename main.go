@@ -6,5 +6,5 @@ import "golang/pkg/basic"
 // it's the entry point for all Go application, this file has to be called main with func main()
 // it receives and returns no arguments
 func main() {
-	basic.RunLongTask()
+	basic.TestCopy2()
 }

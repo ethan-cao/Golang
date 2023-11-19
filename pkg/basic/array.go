@@ -25,4 +25,5 @@ func array1() {
 		}
 	}
 
+	// arrays and slices cannot be declared as constants because their values are not compile-time constants
 }

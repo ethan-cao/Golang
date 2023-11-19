@@ -5,15 +5,13 @@ import "fmt"
 func varTest() {
 	// cannot re-declare, mutable
 	var name0 string = "Tom"
+	// infer string type
 	var name1 = "Hanks"
+	// infer string type
 	name2 := "New"
 
-	// short variable declaration(declare, infer type, assign), mutable
-	// same as var foo int = 32
-	foo := 32
-
-	// wrong, foo is of type int
-	// foo = "t"
+	// wrong, name2 is of type string
+	// name2 = 1
 
 	// declare multiple variable, type inferred
 	var b, c = 1, 2
@@ -21,10 +19,13 @@ func varTest() {
 	// nil is a special value that can be assigned to any data type.
 
 	//  cannot re-declare, immutable
-	const p int = 1
+	const constantVariable int = 1
 
 	// type is inferred
 	const pi = 3.14159
+
+	// wrong, const cannnot use :=
+	// const num1 := 1
 
 	// declare multiple constants in a single statement,
 	const (
@@ -38,7 +39,7 @@ func varTest() {
 	// '' for character
 	char1 := 'c'
 
-	fmt.Println(name0, name1, name2, b, c, foo, string1, char1)
+	fmt.Println(name0, name1, name2, b, c, string1, char1)
 }
 
 func PointerTest1() {

@@ -2,8 +2,8 @@ package basic
 
 import "fmt"
 
-// a struct is collection of different data types
-// similar to Java class
+// a slice is a dynamically-sized, flexible view into the elements of an array.
+// A slice does not store any data itself; it is simply a projection of an underlying array.
 type User struct {
 	ID    int
 	Name  string
