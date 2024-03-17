@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// A goroutine is a lightweight thread of execution.
+
 var waitGroup = sync.WaitGroup{}
 
 func RunLongTask() {
@@ -13,6 +15,7 @@ func RunLongTask() {
 	// so the main thread waits for these thread to complete, when calling waitGroup.Wait()
 	waitGroup.Add(2)
 
+	// call the function using go keyword, whcih start a goroutine running concurrently
 	// spin off new goroutine to run tasks
 	go runLongTask1()
 	go runLongTask2()

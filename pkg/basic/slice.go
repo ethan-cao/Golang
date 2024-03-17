@@ -4,6 +4,8 @@ import "fmt"
 
 func slice1() {
 	// Slice has dynamic size
+	// a slice is a dynamically-sized, flexible view into the elements of an array.
+	// A slice does not store any data itself; it is simply a projection of an underlying array.
 
 	var s1 []string
 	var s2 = []string{}
@@ -31,7 +33,7 @@ func slice1() {
 }
 
 func TestCopy1() {
-	original := []User{User{ID: 1}, User{ID: 2}, User{ID: 3}}
+	original := []Human{Human{ID: 1}, Human{ID: 2}, Human{ID: 3}}
 	copid := original[:]
 
 	// copied is created by slicing original from the first element to the end.
@@ -54,8 +56,8 @@ func TestCopy1() {
 }
 
 func TestCopy2() {
-	original := []User{User{ID: 1}, User{ID: 2}, User{ID: 3}}
-	copied := make([]User, len(original))
+	original := []Human{Human{ID: 1}, Human{ID: 2}, Human{ID: 3}}
+	copied := make([]Human, len(original))
 	copy(copied, original)
 
 	// you are creating a new slice copied with the same length as original

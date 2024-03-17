@@ -2,25 +2,29 @@ package basic
 
 import "fmt"
 
-// a slice is a dynamically-sized, flexible view into the elements of an array.
-// A slice does not store any data itself; it is simply a projection of an underlying array.
+type Human struct {
+	ID   int
+	Name string
+}
+
 type User struct {
-	ID    int
-	Name  string
+	Human //  struct embedding, field in Human promoted to User
 	Email string
 }
 
 // receiver function
 // define func on struct, Java class method
-func (u User) Details() string {
-	return fmt.Sprintf("ID: %d, Name: %s, Email: %s", u.ID, u.Name, u.Email)
+func (user User) Details() string {
+	return fmt.Sprintf("ID: %d, Name: %s, Email: %s", user.ID, user.Name, user.Email)
 }
 
 func TestStruct() {
 	user := User{
-		ID:    1,
-		Name:  "ethan",
-		Email: "test",
+		Human: Human{
+			ID:   1,
+			Name: "ethan",
+		},
+		Email: "email",
 	}
 
 	fmt.Println(user.Name) // ethan
