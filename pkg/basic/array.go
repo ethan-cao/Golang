@@ -9,10 +9,12 @@ func array1() {
 	var a [5]int
 	a[0] = 1
 
-	b := [5]int{1, 2, 3} // [1 2 3 0 0]
-	b[1] = 3             // [1 3 3 0 0]
-
+	b := [5]int{1, 2, 3}                      // [1 2 3 0 0]
+	b[1] = 3                                  // [1 3 3 0 0]
 	fmt.Printf("size of array %v \n", len(b)) // 5
+
+	emptyArray := []string{}
+	fmt.Printf("empty array %v \n", emptyArray)
 
 	for idx, value := range b {
 		fmt.Printf("value from index %v is %v \n", idx, value)
