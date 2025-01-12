@@ -2,27 +2,32 @@ package main
 
 import (
 	"fmt"
-	"os"
-
-	"github.com/pkg/errors"
 )
 
-// There is ONLY one main() in the main package
-// it's the entry point for all Go application, this file has to be called main with func main()
-// it receives and returns no arguments
 func main() {
+	fmt.Print("Go runs on ")
 
-	err := testFunc()
+	// create an empty map string->int
+	m0 := make(map[string]int)
+	fmt.Println(len(m0))
 
-	if err != nil {
-		fmt.Printf("An error occurred: %+v\n", err)
-		os.Exit(1)
+	// create a map string->int with initial values
+	m1 := map[string]int{
+		"k1": 1,
+		"k2": 2,
 	}
-	fmt.Println("Task completed successfully")
 
-}
+	m1["k3"] = 3
 
-func testFunc() error {
-	return errors.WithStack(errors.New("with error"))
-	// return errors.New("error")
+	fmt.Println(len(m1)) // 3
+
+	for k, v := range m1 {
+		fmt.Println("Key:", k, "Value:", v)
+	}
+
+	if val, ok := m1["k1"]; ok {
+		fmt.Printf("@@@ %v\n", val)
+	}
+
+	v, o := m1["k1"]
 }

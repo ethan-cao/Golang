@@ -21,4 +21,8 @@ func mapTest() {
 		fmt.Println("Key:", k, "Value:", v)
 	}
 
+	if val, ok := m1["k1"]; ok {
+		fmt.Printf("@@@ %v", val)
+	}
+
 }
