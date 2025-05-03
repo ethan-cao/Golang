@@ -8,7 +8,7 @@ type Human struct {
 }
 
 type User struct {
-	Human //  struct embedding, field in Human promoted to User
+	Human //  struct embedding, fields in Human promoted to User
 	Email string
 }
 

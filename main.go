@@ -29,5 +29,6 @@ func main() {
 		fmt.Printf("@@@ %v\n", val)
 	}
 
-	v, o := m1["k1"]
+	v, ok := m1["k1"]
+	fmt.Printf("v: %v, ok: %v\n", v, ok)
 }

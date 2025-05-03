@@ -14,14 +14,22 @@ func varTest() {
 	// name2 = 1
 
 	// declare multiple variable, type inferred
-	var b, c = 1, 2
+	// Both ways of variable declaration are equivalent
+	// Method 1: Declaring multiple variables in a single line
+	var x1, x2 = 1, 2
+
+	// Method 2: Declaring multiple variables in a block
+	// This is functionally identical to Method 1, just different syntax
+	var (
+		y1 = 1
+		y2 = 2
+	)
 
 	// nil is a special value that can be assigned to any data type.
 
-	//  cannot re-declare, immutable
+	// cannot re-declare, immutable
 	const constantVariable int = 1
-
-	// type is inferred
+	// infer float64 type
 	const pi = 3.14159
 
 	// wrong, const cannnot use :=
@@ -39,7 +47,7 @@ func varTest() {
 	// '' for character
 	char1 := 'c'
 
-	fmt.Println(name0, name1, name2, b, c, string1, char1)
+	fmt.Println(name0, name1, name2, x1, x2, y1, y2, string1, char1)
 }
 
 func PointerTest1() {
