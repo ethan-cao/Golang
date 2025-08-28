@@ -2,9 +2,13 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
+	var time *time.Time = nil
+	fmt.Println(time)
+
 	fmt.Print("Go runs on ")
 
 	// create an empty map string->int

@@ -30,7 +30,7 @@ type Shape interface {
 	Area() float64
 }
 
-func main() {
+func interfaceMain() {
 	// Using structs
 	rect := Rectangle{
 		width:  10,
